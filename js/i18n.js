@@ -11,7 +11,7 @@ export const messages = {
   home: ['Home', '首頁'], experiments: ['Experiments', '實驗'], documentation: ['Documentation', '說明文件'], about: ['About', '關於作者'],
   swapName: ['Magnitude / Phase Swap', '振幅／相位交換'], spectrumName: ['Spectrum / Translation', '頻譜／平移'], filteringName: ['Gaussian Filtering', '高斯濾波'], regionName: ['Partial Phase Region Swap', '局部相位區域交換'],
   colorPhaseName: ['Different Color, Different Phase', '色彩通道相位交換'],
-  skip: ['Skip to content', '跳至主要內容'], brandHome: ['FOURIER IMAGE LAB home', 'FOURIER IMAGE LAB 首頁'], inBrowser: ['IN YOUR BROWSER', '在瀏覽器內運算'], mainNav: ['Main navigation', '主要導覽'], footer: ['Footer', '頁尾'], language: ['Language', '語言'], newTab: ['opens in a new tab', '另開分頁'], github: ['GitHub Repository', 'GitHub 專案'], license: ['MIT License', 'MIT 授權'],
+  skip: ['Skip to content', '跳至主要內容'], brandHome: ['FOURIER IMAGE LAB home', 'FOURIER IMAGE LAB 首頁'], mainNav: ['Main navigation', '主要導覽'], footer: ['Footer', '頁尾'], language: ['Language', '語言'], newTab: ['opens in a new tab', '另開分頁'], github: ['GitHub Repository', 'GitHub 專案'], license: ['MIT License', 'MIT 授權'],
   creditBefore: ['This website is developed by ', '本網站由 '], creditAfter: ['.', ' 開發。'], typeset: ['Typeset with KaTeX', '公式排版：KaTeX'], katexLicense: ['KaTeX license', 'KaTeX 授權'],
   mountain: ['Mountain lake', '山景湖泊'], lighthouse: ['Coastal lighthouse', '海岸燈塔'],
   workerUnavailable: ['The calculation worker is unavailable. Please reload the page.', '運算程序無法使用，請重新整理頁面。'],
