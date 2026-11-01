@@ -23,7 +23,6 @@ a { color: inherit; }
 .brand-mark { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: var(--green); color: #1a2d1d; font: italic 29px Georgia, serif; padding-right: 3px; }
 .brand-divider { color: #526256; margin: 0 12px; }
 .brand-light { color: var(--muted); }
-.local-badge { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 11px; letter-spacing: .04em; }
 .status-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
 .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; padding-top: 20px; font: 11px var(--mono); }
 .page-nav a { color: var(--muted); text-decoration: none; padding: 6px 0; white-space: nowrap; }
@@ -40,6 +39,7 @@ h1 > span:first-child { color: var(--green); }
 .title-dot { color: var(--peach); }
 .subtitle { color: #c6d0c8; font-size: 15px; margin: 22px 0 9px; line-height: 1.6; }
 .intro-description { color: var(--muted); font-size: 13px; line-height: 1.8; margin: 0; }
+h1 + .intro-description { margin-top: 20px; }
 .signal-art { width: 190px; flex-shrink: 0; color: var(--green); opacity: .8; margin-right: 10px; transform: rotate(-5deg); }
 .signal-art svg { display: block; width: 100%; }
 .signal-grid { stroke: #46564a; stroke-width: .6; stroke-dasharray: 2 5; }
@@ -146,6 +146,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; border-top: 1
   .page-shell { padding: 0 22px; }
   .brand-light, .brand-divider { display: none; }
   .intro { padding: 35px 0; }
+  h1 + .intro-description { margin-top: 16px; }
   .signal-art { display: none; }
   h1 { font-size: 40px; }
   .heading-en { display: none; }
@@ -164,7 +165,6 @@ footer { display: flex; justify-content: space-between; gap: 16px; border-top: 1
   .page-nav > span { display: none; }
   .page-shell { padding: 0 18px; }
   .topbar { padding: 19px 0; }
-  .local-badge { font-size: 9px; gap: 5px; }
   .brand { font-size: 10px; gap: 8px; }
   .eyebrow { font-size: 8px; letter-spacing: .9px; gap: 9px; }
   .eyebrow-line { width: 14px; }

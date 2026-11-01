@@ -1,6 +1,5 @@
 /* Shared site chrome; experiment layouts keep their existing styles. */
 .site-header .topbar { border-bottom: 0; padding-bottom: 21px; }
-.site-header .local-badge { font: 9px var(--mono); letter-spacing: 1px; }
 .site-nav { position: relative; display: flex; align-items: stretch; gap: 32px; border-bottom: 1px solid var(--line); font: 11px var(--mono); }
 .site-nav > a { position: relative; padding: 0 0 18px; color: var(--muted); text-decoration: none; }
 .site-nav > a:hover, .site-nav > a[aria-current] { color: var(--green); }
@@ -43,7 +42,6 @@
   .nav-disclosure { position: static; }
   .experiment-menu { left: 0; right: 0; width: auto; max-width: none; }
   .language-switch { gap: 4px; font-size: 9px; margin-left: 0; }
-  .site-header .local-badge { font-size: 7px; letter-spacing: .25px; }
   .site-header .topbar { gap: 10px; padding-bottom: 20px; }
   .site-footer { gap: 18px; }
 }

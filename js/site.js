@@ -15,7 +15,6 @@ if (header) header.innerHTML = `
   <header class="site-header">
     <div class="topbar">
       <a class="brand" href="${pageURL('home')}" aria-label="${t('brandHome')}"><span class="brand-mark" aria-hidden="true">ƒ</span><span>FOURIER IMAGE LAB</span></a>
-      <span class="local-badge"><span class="status-dot" aria-hidden="true"></span>${t('inBrowser')}</span>
     </div>
     <nav class="site-nav" aria-label="${t('mainNav')}">
       <a href="${pageURL('home')}"${current === 'home' ? ' aria-current="page"' : ''}>${t('home')}</a>
