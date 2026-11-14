@@ -85,13 +85,13 @@ Reconstructed Square 經真正 `IFFT2(|F_original| exp(iφ_shifted))` 計算。�
 
 ### 本機開啟與重複執行
 
-目前本機預覽：<http://127.0.0.1:8080/fourier-phase-swap-playground/spectrum.html>。重新啟動時：
+目前本機預覽：<http://127.0.0.1:8080/Fourier-Image-Playground/spectrum.html>。重新啟動時：
 
 ```powershell
 # 在未設定 BASE_PATH 的終端機跑全部測試
 node --test tests/*.test.mjs
 # 模擬 GitHub Pages 子路徑
-$env:BASE_PATH = '/fourier-phase-swap-playground/'
+$env:BASE_PATH = '/Fourier-Image-Playground/'
 node scripts/serve.mjs
 ```
 
@@ -192,16 +192,16 @@ Shift Theorem 的自動化容許值為原始係數絕對誤差 `< 1e-7`、振幅
 
 ```powershell
 node --test tests/*.test.mjs
-$env:BASE_PATH = '/fourier-phase-swap-playground/'
+$env:BASE_PATH = '/Fourier-Image-Playground/'
 node scripts/serve.mjs
 ```
 
 開啟下列本機網址：
 
-- Lab：<http://127.0.0.1:8080/fourier-phase-swap-playground/spectrum.html>
-- Playground：<http://127.0.0.1:8080/fourier-phase-swap-playground/index.html>
-- Phase 1 測試：<http://127.0.0.1:8080/fourier-phase-swap-playground/tests/browser.html>
-- Phase 2 測試：<http://127.0.0.1:8080/fourier-phase-swap-playground/tests/spectrum-browser.html>
+- Lab：<http://127.0.0.1:8080/Fourier-Image-Playground/spectrum.html>
+- Playground：<http://127.0.0.1:8080/Fourier-Image-Playground/index.html>
+- Phase 1 測試：<http://127.0.0.1:8080/Fourier-Image-Playground/tests/browser.html>
+- Phase 2 測試：<http://127.0.0.1:8080/Fourier-Image-Playground/tests/spectrum-browser.html>
 
 若要使用預設根目錄模式，先在同一 PowerShell 用 `Remove-Item Env:BASE_PATH -ErrorAction SilentlyContinue` 移除環境變數，再啟動伺服器。執行 Node 測試時也使用未設定 `BASE_PATH` 的終端機，保留原有根路徑測試環境。
 

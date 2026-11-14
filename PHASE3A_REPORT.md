@@ -146,7 +146,7 @@ node --test tests/*.test.mjs
 node scripts/serve.mjs
 ```
 
-預覽：`http://127.0.0.1:8080/filtering.html`。瀏覽器測試：`http://127.0.0.1:8080/tests/filtering-browser.html`。模擬 repository 子路徑時，在啟動前設定 `$env:BASE_PATH = '/fourier-phase-swap-playground/'`。
+預覽：`http://127.0.0.1:8080/filtering.html`。瀏覽器測試：`http://127.0.0.1:8080/tests/filtering-browser.html`。模擬 repository 子路徑時，在啟動前設定 `$env:BASE_PATH = '/Fourier-Image-Playground/'`。
 
 - FFT 仍採既有的 256²、週期邊界與 sRGB 0–255 數值。照片兩邊不連續可能產生邊緣響應；顯示 clamp 可能裁掉 HPF 極值與 Sharpening 過衝。
 - 未驗證 Firefox、Safari、實體手機、特殊 ICC／EXIF、螢幕閱讀器與長時間記憶體使用。手機寬度測試是在 Chromium iframe 內進行。

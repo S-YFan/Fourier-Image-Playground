@@ -2,7 +2,7 @@
 
 ## Overview
 
-FOURIER IMAGE LAB is a browser-based interactive Fourier image lab, available in English and Traditional Chinese. See the [live website](https://s-yfan.github.io/Foruier-Image-Playground/) and [Documentation](https://s-yfan.github.io/Foruier-Image-Playground/documentation.html).
+FOURIER IMAGE LAB is a browser-based interactive Fourier image lab, available in English and Traditional Chinese. See the [live website](https://s-yfan.github.io/Fourier-Image-Playground/) and [Documentation](https://s-yfan.github.io/Fourier-Image-Playground/documentation.html).
 
 ## Architecture & Implementation
 
