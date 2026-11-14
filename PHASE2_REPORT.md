@@ -36,7 +36,7 @@ Reconstructed Square 經真正 `IFFT2(|F_original| exp(iφ_shifted))` 計算。�
 
 ### 實際執行結果
 
-環境仍為 Windows、Node v24.19.0、Chromium Chrome/155.0.0.0。兩組 Chromium 測試均在 `/fourier-phase-swap-playground/` repository 子路徑執行。
+環境仍為 Windows、Node v24.19.0、Chromium Chrome/155.0.0.0。兩組 Chromium 測試均在 子路徑執行。
 
 | 測試組 | 本次實測 |
 | --- | ---: |
@@ -160,7 +160,7 @@ Node 除了 round-trip，也以獨立直接求和 DFT 驗證每種圖形的 DC�
 
 顯示測試逐點確認 log 映射、循環相位 RGB、零點中性色、alpha=255、DC 居中，以及輸入像素和四組原始頻譜陣列完全不變。Worker 測試記錄：每個新 Preset 512 次 1D transform（1 次 2D FFT），四個共 2048 次；重新選擇與比較不增加 FFT 次數。Transfer 後仍可重複取得完全相同顯示資料；錯誤 Preset 不破壞快取。
 
-HTTP 測試實際在 `/fourier-phase-swap-playground/` 掛載並讀取 16 項兩頁與 module graph 資源；不只是靜態解析網址。兩組瀏覽器測試均使用這個前綴執行。Phase 2 會實際點擊導航、等待 Playground 預設兩張圖片完成交換，再返回 Lab。
+HTTP 測試在本機子路徑掛載網站，實際讀取兩頁及模組所需的 16 項資源。兩組瀏覽器測試均使用相同前綴。Phase 2 會實際點擊導航、等待 Playground 預設兩張圖片完成交換，再返回 Lab。
 
 瀏覽器切換四種圖形後，比對每張原圖、Magnitude、Phase Canvas 的全部 RGBA 像素。比較區的四個 Canvas 也逐像素比對原始分析得到的顯示資料，頁面顯示的數值差異與計算一致。另實測比較開關、忙碌時快速點擊、防止資料交錯、注入 `postMessage` 例外後保留圖像並成功重試。
 

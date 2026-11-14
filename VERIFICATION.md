@@ -14,7 +14,7 @@ Experiment 003 介面微調更新：2026-10-19（Asia/Taipei）。公開命名�
 
 Phase 3A 更新：2026-10-19（Asia/Taipei）。已新增獨立 Gaussian Filtering 頁面，使用真正的 RGB 頻域濾波與 IFFT，預設範例改為擁有者提供的 Monkey / Cat 照片。全部 **47/47 Node、20/20 Phase 1 Chromium、19/19 Phase 2 Chromium、12/12 Phase 3A Chromium** 測試通過。12 組 NumPy 交叉比對最大實部差異 `5.68e-13`，最大虛部殘差 `4.90e-13`。本次沒有 Commit、Push、PR、Merge 或部署。實作、檔案清單、sigma 慣例與驗證限制見 [PHASE3A_REPORT.md](PHASE3A_REPORT.md)。以下 Phase 1 / Phase 2 的日期與發布狀態均為歷史紀錄。
 
-Phase 2 Refinement 更新：2026-10-17（Asia/Taipei）。本機 `feature/fourier-spectrum` 分支實測 **38/38 Node、20/20 Phase 1 Chromium、19/19 Phase 2 Chromium** 通過。包含原有 31 項 Node 與 7 項新增測試，兩組瀏覽器測試均在 `/fourier-phase-swap-playground/` 子路徑執行。202 組位移的 IFFT 最大實部誤差 `1.8474111129762605e-13`，8-bit 顯示像素差為 0。Phase 1 FFT、RGB 重建、Worker 和原有測試程式未更動，Playground 保持 refinement 開始時的原樣。
+Phase 2 Refinement 更新：2026-10-17（Asia/Taipei）。本機 `feature/fourier-spectrum` 分支實測 **38/38 Node、20/20 Phase 1 Chromium、19/19 Phase 2 Chromium** 通過。包含原有 31 項 Node 與 7 項新增測試，兩組瀏覽器測試均在 子路徑執行。202 組位移的 IFFT 最大實部誤差 `1.8474111129762605e-13`，8-bit 顯示像素差為 0。Phase 1 FFT、RGB 重建、Worker 和原有測試程式未更動，Playground 保持 refinement 開始時的原樣。
 
 Final Release Review（2026-10-17）再次執行 **38/38 Node、20/20 Phase 1 Chromium、19/19 Phase 2 Chromium** 全部通過；未發現 Release Blocker。Phase 1 核心無 diff，滑桿引導已存在，Phase Change 零值與無效遮罩明確不同，Release 暫存清單排除 `.qa`、暫存檔與截圖。依使用者授權提交功能分支並建立 PR；Merge 及部署尚未執行。
 
