@@ -42,7 +42,7 @@
 - 共用導航保留深色風格與折行；窄螢幕隱藏裝飾性分隔線，避免換行時出現獨立斜線。
 - 修改 `index.html`、`spectrum.html`、`filtering.html`、`styles.css`、`filtering.css`；擴充 `tests/spectrum-static.test.mjs`、`tests/spectrum-browser.js`、`tests/filtering-browser.js`，同步 README 與驗證紀錄。沒有更動任何 `js/` 模組或照片。
 - 修改前先重跑 Gaussian 數學測試（7/7 通過），確認 alpha 僅影響 Sharpening。完整回歸 **47/47 Node、20/20 Phase 1 Chromium、19/19 Phase 2 Chromium、13/13 Experiment 003 Chromium** 全部通過。
-- 擴充測試逐像素確認 alpha = 0 與 alpha = 3 時 LPF／HPF 均保持一致；sigma 從 1 到 200 時三種結果皆更新。實際點擊三頁間所有六個方向，在 `/fourier-phase-swap-playground/` 子路徑驗證連結、頁面初始化、公開編號及目前頁面狀態；三頁分別於 1040／390／320px 驗證所有導航連結可見且無水平溢出。
+- 擴充測試逐像素確認 alpha = 0 與 alpha = 3 時 LPF／HPF 均保持一致；sigma 從 1 到 200 時三種結果皆更新。實際點擊三頁間所有六個方向，在 子路徑驗證連結、頁面初始化、公開編號及目前頁面狀態；三頁分別於 1040／390／320px 驗證所有導航連結可見且無水平溢出。
 - 本次記錄保存於忽略目錄 `.qa/experiment003-refinement-*`。未 Commit、Push、建立 PR、Merge 或部署；跨瀏覽器與實體裝置限制同下方原始報告。
 
 ## 實作結果
@@ -135,7 +135,7 @@ Node 新增驗證涵蓋 LPF 隨 sigma 降低而抑制高頻、HPF 移除 DC／�
 
 獨立 tiny DFT / centered mask / IFFT 最大差異為 `4.51e-12`。8²／64²／256² alpha = 0 的最大實部差異為 `1.14e-13`，8-bit 顯示像素差為 **0**；同組測試最大虛部殘差 `4.11e-13`。NumPy 交叉比對涵蓋 8²／64²／256²，以及 `(sigma,alpha)` 為 `(1,0)`、`(30,1)`、`(100,2.5)`、`(200,3)`，逐 RGB 通道比較三種數值輸出。
 
-全部瀏覽器套件都在 `/fourier-phase-swap-playground/` repository 子路徑執行，涵蓋真實圖片解碼、Canvas、module Worker 與實際 UI 事件。Phase 3A 顯示像素與核心結果差異 **0**；82 次連續參數輸入僅提交 **2 次**濾波請求並顯示最新目標。另驗證來源／參數同時更新、三種格式、長寬圖與透明圖、黑白常數圖、格式／大小／損壞檔案、取消選擇、postMessage 故障與恢復、1040／390／320px 無水平溢出。10 個 Blob URL 全部撤銷。
+全部瀏覽器套件都在 子路徑執行，涵蓋真實圖片解碼、Canvas、module Worker 與實際 UI 事件。Phase 3A 顯示像素與核心結果差異 **0**；82 次連續參數輸入僅提交 **2 次**濾波請求並顯示最新目標。另驗證來源／參數同時更新、三種格式、長寬圖與透明圖、黑白常數圖、格式／大小／損壞檔案、取消選擇、postMessage 故障與恢復、1040／390／320px 無水平溢出。10 個 Blob URL 全部撤銷。
 
 原始瀏覽器 JSON、NumPy 比對程式／結果與畫面保存在本機忽略目錄 `.qa/phase3a-*`；可重複執行的 Node 與瀏覽器測試位於 `tests/`。未新增任何遠端部署或發布動作。
 
