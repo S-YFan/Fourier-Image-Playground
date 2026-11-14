@@ -16,7 +16,7 @@ const pages = [
 
 test('Home, documentation and all five experiments load with their resource graphs under the GitHub Pages subpath', { timeout: 15000 }, async t => {
   const root = new URL('../', import.meta.url);
-  const basePath = '/Foruier-Image-Playground/';
+  const basePath = '/Fourier-Image-Playground/';
   const server = spawn(process.execPath, ['scripts/serve.mjs'], {
     cwd: fileURLToPath(root), env: { ...process.env, PORT: '0', BASE_PATH: basePath }, windowsHide: true,
     stdio: ['ignore', 'pipe', 'pipe'],
